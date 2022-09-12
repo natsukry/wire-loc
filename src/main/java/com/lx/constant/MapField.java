@@ -2,7 +2,7 @@ package com.lx.constant;
 
 /**
  * Description:
- * Author:lixin_natsu
+ * Author:rishins
  * Date:2022-09-11
  * Time:10:31 PM
  */
