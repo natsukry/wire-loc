@@ -1,0 +1,16 @@
+{
+  "request": {
+    "method": "get",
+    "urlPath": "/get/addr"
+  },
+  "response": {
+    "status": 201,
+    "body": {
+      "info": {
+        "estimation": "OK",
+        "quality": "HD"
+      },
+      "msg": "Address Created"
+    }
+  }
+}

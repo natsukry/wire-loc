@@ -1,0 +1,16 @@
+{
+  "request": {
+    "method": "get",
+    "urlPath": "/get/tax"
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "info": {
+        "estimation": "OK",
+        "quality": "HD"
+      },
+      "msg": "Tax Created"
+    }
+  }
+}
