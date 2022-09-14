@@ -10,9 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-// 注入spring容器
 @Component
-// 定义filterName 和过滤的url
+// urls filtered
 @WebFilter(filterName = "baseFilter", urlPatterns = "/*")
 public class BaseFilter implements Filter {
     @Autowired
@@ -21,12 +20,7 @@ public class BaseFilter implements Filter {
 
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
-        HttpServletRequest request = (HttpServletRequest) servletRequest;
-
-//        request.getRequestDispatcher("/result/json").forward(servletRequest, servletResponse);
-//        filterChain.doFilter(servletRequest,servletResponse);
-        HttpServletResponse response = (HttpServletResponse) servletResponse;
-        buildResponseUtil.buildResp(request, response);
+        buildResponseUtil.buildResp((HttpServletRequest) servletRequest, (HttpServletResponse) servletResponse);
     }
 
 }
