@@ -10,7 +10,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Description:
+ * Description: read and parse mapping
  * Author:Jason Li
  * Date:2022-09-11
  * Time:10:07 PM
@@ -23,8 +23,8 @@ public class MockMapUtil {
 
     @PostConstruct
     public void parseMapping() throws Exception {
-        // 读取mapping文件
-        // 解析 status, body
+        // read mapping files
+        // parse status, body
 
         String dir = this.getClass().getClassLoader().getResource("mapping").getPath();
         System.out.println(dir);

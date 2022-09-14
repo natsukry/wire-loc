@@ -8,8 +8,8 @@ By given request(path, method), the sever will response the response(body, statu
 | target | des            | status            |
 | ------ | -------------- | ----------------- |
 | v1     | simple mapping | response not json |
-|   v1.1     |                |      json issue fixed             |
-| v1.2 | add **mock** field in header |  |
+|   v1.1     | bug fix |      json issue fixed             |
+| v1.2 | add **mock** field in header | done |
 
 ## how to use
 

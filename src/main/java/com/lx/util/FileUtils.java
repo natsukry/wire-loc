@@ -6,7 +6,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 /**
- * Description:
+ * Description: read content from files
  * Author:Jason Li
  * Date:2022-09-11
  * Time:9:34 PM

@@ -18,10 +18,6 @@ public class BaseFilter implements Filter {
     @Autowired
     private BuildResponseUtil buildResponseUtil;
 
-    @Override
-    public void init(FilterConfig filterConfig) throws ServletException {
-
-    }
 
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
@@ -31,12 +27,6 @@ public class BaseFilter implements Filter {
 //        filterChain.doFilter(servletRequest,servletResponse);
         HttpServletResponse response = (HttpServletResponse) servletResponse;
         buildResponseUtil.buildResp(request, response);
-
-
     }
 
-    @Override
-    public void destroy() {
-
-    }
 }
