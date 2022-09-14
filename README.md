@@ -9,6 +9,7 @@ By given request(path, method), the sever will response the response(body, statu
 | ------ | -------------- | ----------------- |
 | v1     | simple mapping | response not json |
 |   v1.1     |                |      json issue fixed             |
+| v1.2 | add **mock** field in header |  |
 
 ## how to use
 
@@ -18,7 +19,8 @@ put your mapping json in resources/mapping
 {
   "request": {
     "method": "get",
-    "urlPath": "/get/addr"
+    "urlPath": "/get/addr",
+    "mock": "a1"
   },
   "response": {
     "status": 201,
@@ -35,12 +37,13 @@ put your mapping json in resources/mapping
 
 ### fields
 
-| Attribute       | Mandatory |
-| --------------- | --------- |
-| request         | M         |
-| request.method  | M         |
-| request.urlPath | M         |
-| response        | M         |
-| response.status | M         |
-| response.body   | M         |
+| Attribute       | Mandatory/Optional |
+| --------------- | ------------------ |
+| request         | M                  |
+| request.method  | M                  |
+| request.urlPath | M                  |
+| request.mock    | O                  |
+| response        | M                  |
+| response.status | M                  |
+| response.body   | M                  |
 

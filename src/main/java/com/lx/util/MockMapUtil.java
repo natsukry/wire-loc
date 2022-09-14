@@ -39,6 +39,9 @@ public class MockMapUtil {
 
             requestMap.put("method", trimHeadEnd(requestJObj.get("method").toString()));
             requestMap.put("urlPath", trimHeadEnd(requestJObj.get("urlPath").toString()));
+            if (null != requestJObj.get("mock")){
+                requestMap.put("mock", trimHeadEnd(requestJObj.get("mock").toString()));
+            }
 
 
             JsonObject responseJObj = jsonObject.get("response").getAsJsonObject();
