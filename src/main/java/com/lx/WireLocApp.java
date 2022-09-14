@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * Description:
+ * Description: start app
  * Author:Jason Li
  * Date:2022-09-11
  * Time:8:01 PM

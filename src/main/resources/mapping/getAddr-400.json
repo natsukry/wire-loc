@@ -1,0 +1,16 @@
+{
+  "request": {
+    "method": "get",
+    "urlPath": "/get/addr",
+    "mock": "a1"
+  },
+  "response": {
+    "status": 402,
+    "body": {
+      "info": {
+        "errorInfo": "a1"
+      },
+      "msg": "Error Address"
+    }
+  }
+}

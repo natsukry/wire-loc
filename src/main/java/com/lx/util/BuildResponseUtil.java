@@ -10,9 +10,10 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 /**
- * Description:
+ * Description: build response
  * Author:Jason Li
  * Date:2022-09-11
  * Time:10:25 PM
@@ -31,7 +32,15 @@ public class BuildResponseUtil {
             Map<String, String> keyMap = entry.getKey();
             if (keyMap.get(MapField.METHOD).equalsIgnoreCase(method)
                     && keyMap.get(MapField.URL_PATH).equalsIgnoreCase(uri)) {
-                return entry.getValue();
+                if (null !=request.getHeader("mock")) {
+                    if (null != keyMap.get("mock")) {
+                        if (request.getHeader("mock").equals(keyMap.get("mock"))) {
+                            return entry.getValue();
+                        }
+                    }
+                } else {
+                    return entry.getValue();
+                }
             }
         }
         // TODO
